@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autofocus Field</title>
+    {{!--
+    <link rel="stylesheet" type="text/css" href="otp.css"> --}}
+    <link rel="stylesheet" href="../public/css/otp.css">
+</head>
+
+<body>
+    <form action="/otp" method="post">
+           {{!-- <input type="text" name='otp'> --}}
+        <div class="container">
+            <h1>VERIFY OTP</h1>
+            <div class="userInput">
+                <input type="text" id='ist' name="otp" maxlength="4" onkeyup="clickEvent(this,'sec')">
+                {{!-- <input type="text" id="sec" name="otp" maxlength="1" onkeyup="clickEvent(this,'third')"> --}}
+                {{!-- <input type="text" id="third" name="otp" maxlength="1" onkeyup="clickEvent(this,'fourth')"> --}}
+                {{!-- <input type="text" id="fourth" name="otp" maxlength="1" onkeyup="clickEvent(this,'fifth')"> --}}
+             
+            </div>
+            <button type="submit">CONFIRM</button>
+        </div>
+
+    </form>
+    {{!-- <script>
+        function clickEvent(first, last) {
+            if (first.value.length) {
+                document.getElementById(last).focus();
+            }
+        }</script> --}}
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/home.css  ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+   
+    <header>
+        <a href="#" class="logo">FOOD<span>SHOP</span></a>
+        <div class="menutoggle" onclick="togglemenu();">
+
+        </div>
+        <ul class="navigation">
+          
+        
+            <li><a href="/homePage">Home</a></li>
+            <li><a href="#ourmenu">Our Product</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            {{#if messageank}}
+            <li><a href="/logout" >Logout</a></li>
+            {{else}}
+          <li><a href="/signup">Sign-up</a></li>
+            <li><a href="/login">login</a></li>
+          
+            {{/if}}
+
+         
+        </ul>
+        <a href="/cartpage">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      
+        <h3 style="color: rgb(223, 19, 152);">{{messageank}}</h3>
+    </header>
+
+
+
+
+    <script>
+
+
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function togglemenu() {
+            const menutoggle = document.querySelector('.menutoggle');
+            const navigation = document.querySelector('.navigation');
+            menutoggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        };
+    </script>
+
+
+
+</body>
+
+</html>

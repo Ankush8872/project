@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../public/css/login.css">
+</head>
+
+<body>
+    {{>navbar}}
+  <div class="LoginPageContainer">
+    <div class="LoginPageInnerContainer">
+      <div class="ImageContianer">
+        <img src="../public/image/girlshopping-removebg-preview.png">
+      </div>
+      <div class="LoginFormContainer">
+        <div class="LoginFormInnerContainer">
+          <div class="LogoContainer">
+            <h3>login here</h3>
+              
+          </div>
+
+
+          <form action="/login" method="post">
+            <div class="inputContainer">
+              <label class="label" for="emailAddress"><img src="https://i.imgur.com/Hn13wvm.png"
+                  class="labelIcon"><span>Email
+                  Address*</span></label>
+              <input type="email" class="input" name="email" placeholder="Enter your Email Address" required>
+            </div>
+            <div class="inputContainer">
+              <label class="label" for="emailAddress"><img src="https://i.imgur.com/g5SvdfG.png"
+                  class="labelIcon"><span>Password*</span></label>
+              <input type="password" name="password" class="input" placeholder="Enter your Password" required>
+            </div>
+            <div class="OptionsContainer">
+              <div class="checkboxContainer">
+
+              </div>
+              <a href="/email" class="ForgotPasswordLink">Forgot Password?</a>
+            </div>
+            <button class="LoginButton" type="submit">Login</button>
+            <p class="have-account-line">create account ? <a href="/signup">signup</a></p>
+
+            <p style="color: red;">{{message}}</p>
+          {{!-- <p style="color: white">{{message2}}</p> --}}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>foot}}
+ 
+</body>
+
+</html>
